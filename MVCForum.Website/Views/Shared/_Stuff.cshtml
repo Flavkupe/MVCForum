@@ -1,0 +1,8 @@
+﻿@model MVCForum.Domain.DomainModel.Stuff
+
+<div style="border: 1px solid gray; border-radius: 8px; display:inline-block; margin: 4px">
+    <div style="padding: 4px; margin: auto; display: block">
+        <img src="@Url.Content(AppHelpers.ReturnStuffUrl(Model.Image))" alt="@Model.Name" title="Cost: @Model.Cost" />
+        <div style="text-align:center">@Html.Raw(Model.DisplayName)</div>
+    </div>
+</div>

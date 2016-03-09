@@ -1,0 +1,15 @@
+﻿@model MVCForum.Website.ViewModels.AllDailyStuffViewModel.DailyStuff
+
+<script type="text/javascript">
+
+</script>
+
+<div style="border: 1px solid gray; border-radius: 8px; display:inline-block; margin: 4px"    >
+    <button class="btn btn-default" 
+            style="padding: 4px; margin: auto; display: block @(Model.Owned ? "; background-color: #827C7C; border-color: #adadad" : null)" 
+            onclick="PurchaseStuffFunc('@Model.Stuff.Id')" >
+        <img src="@Url.Content(AppHelpers.ReturnStuffUrl(Model.Stuff.Image))" alt="@Model.Stuff.Name" title="Cost: @Model.Stuff.Cost" />
+        <div style="text-align:center">@Html.Raw(Model.Stuff.DisplayName)</div>
+        <div style="text-align:center; color: blue">Available: @Html.Raw(Model.Amount)</div>
+    </button>    
+</div>

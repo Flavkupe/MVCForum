@@ -1,0 +1,12 @@
+﻿@model MVCForum.Domain.DomainModel.Stuff
+
+<script type="text/javascript">
+
+</script>
+
+<div style="border: 1px solid gray; border-radius: 8px; display:inline-block; margin: 4px"    >
+    <button class="btn btn-default" style="padding: 4px; margin: auto; display: block" >            
+        <img src="@Url.Content(AppHelpers.ReturnStuffUrl(Model.Image))" alt="@Model.Name" />
+        <div style="text-align:center">@Html.Raw(Model.DisplayName)</div>        
+    </button>    
+</div>

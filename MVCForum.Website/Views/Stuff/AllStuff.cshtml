@@ -1,0 +1,21 @@
+﻿@model MVCForum.Website.ViewModels.AllStuffViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutRightSideBar.cshtml";
+    ViewBag.Title = "Stuff";
+}
+
+@section side
+{
+    @Html.Partial("_CommonSideNav")
+}
+
+<div class="mainheading">
+    <h1>@ViewBag.Title</h1>
+</div>
+
+<div class="badgeholder">
+    @foreach (var stuff in Model.AllStuff)
+    {
+        @Html.Partial("_Stuff", stuff)
+    }
+</div>

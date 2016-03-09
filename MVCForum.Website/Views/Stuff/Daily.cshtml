@@ -1,0 +1,30 @@
+﻿@model MVCForum.Website.ViewModels.AllDailyStuffViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutRightSideBar.cshtml";
+    ViewBag.Title = "Daily Stuff";
+}
+
+@section side
+{
+    @Html.Partial("_CommonSideNav")
+}
+
+<div class="mainheading">
+    <h1>Daily Stuff</h1>
+</div>
+
+<div class="badgeholder">
+    @foreach (var stuff in Model.AllDailyStuff)
+    {
+        @Html.Partial("_DailyStuff", stuff)
+    }
+
+    <hr />
+
+    <h1>My Stuff</h1>
+
+    @foreach (var stuff in Model.MyStuff)
+    {
+        @Html.Partial("_MyStuff", stuff)
+    }
+</div>
